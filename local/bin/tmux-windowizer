@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+window_name=$(basename "$1")
+session_name=$(tmux display-message -p "#S")
+clean_name=$(echo $window_name | tr "./" "__")
+target="$session_name:$clean_name"
+message="tmux display-message -d 8000 'Script ${window_name} is done'"
+
+if ! tmux has-session -t $target 2> /dev/null; then
+  tmux neww -dn $clean_name
+fi
+
+case "$session_name" in
+    sisne)
+      cm="./script/runner"
+      ;;
+    intranet)
+      cm="rails runner"
+      ;;
+    *)
+      echo "No application selected"
+      exit 0
+      ;;
+esac
+
+tmux send-keys -t $target "${cm} ${1} && ${message}" enter
+
