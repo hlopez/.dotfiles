@@ -34,7 +34,7 @@ stow_dotfiles() {
     mkdir -p "$HOME/$d"
   done
 
-  local dotfiles="nvim ssh vim zsh tmux"
+  local dotfiles="bin nvim vim zsh tmux"
   info "Stowing: $dotfiles"
   stow -d stow --target $HOME $dotfiles
 }

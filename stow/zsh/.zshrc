@@ -63,8 +63,8 @@ export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
 export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
 export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
 export LC_ALL=en_US.UTF-8
-export SISNE_HOME="/Users/hlopez/Development/sisne"
-export INTRANET_HOME="/Users/hlopez/Development/intranet_gna"
+export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
+export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna"
 
 #rbenv issues
 export PATH="$HOME/.rbenv/bin:$PATH"
