@@ -5,8 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
- ZSH_THEME="frisk"
-# ZSH_THEME="robbyrussell"
+#ZSH_THEME="frisk"
+ ZSH_THEME="robbyrussell"
 # ZSH_THEME="alanpeabody"
 
 # Example aliases
@@ -55,7 +55,7 @@ alias psqlintranet='psql --cluster 11/main gna_net'
 #PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 #PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
-PATH="~/.local/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 #XCode 5 hides these away:
@@ -67,8 +67,8 @@ export SISNE_HOME="/Users/hlopez/Development/sisne"
 export INTRANET_HOME="/Users/hlopez/Development/intranet_gna"
 
 #rbenv issues
-eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=true
 
