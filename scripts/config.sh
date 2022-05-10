@@ -21,6 +21,7 @@ stow_dotfiles() {
   local folders=(
     ".config/nvim"
     ".ssh"
+    ".vim"
   )
   info "Removing existing config files"
   for f in "${files[@]}"; do
@@ -37,3 +38,5 @@ stow_dotfiles() {
   info "Stowing: $dotfiles"
   stow -d stow --target $HOME $dotfiles
 }
+
+stow_dotfiles
