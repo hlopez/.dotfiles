@@ -2,6 +2,7 @@
 
 window_name=$(basename "$1")
 session_name=$(tmux display-message -p "#S")
+echo "${session_name}"
 clean_name=$(echo $window_name | tr "./" "__")
 target="$session_name:$clean_name"
 message="tmux display-message -d 8000 'Script ${window_name} is done'"
@@ -15,7 +16,7 @@ case "$session_name" in
       cm="./script/runner"
       ;;
     intranet)
-      cm="rails runner"
+      cm="cd $INTRANET_HOME; rails runner"
       ;;
     *)
       echo "No application selected"

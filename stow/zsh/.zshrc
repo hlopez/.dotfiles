@@ -52,6 +52,11 @@ alias sshneuro='ssh hugo.lopez@200.24.30.19 -p 62331'
 alias mvsisne='open -a /Applications/MacVim.app ~/Development/sisne/'
 alias psqlsisne='psql --cluster 9.3/main sisne'
 alias psqlintranet='psql --cluster 11/main gna_net'
+alias lsrubo='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs rubocop'
+alias lsrubod='git diff --diff-filter=d --name-only develop| xargs bundle exec rubocop --force-exclusion -'
+alias lsreek='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs reek'
+alias lsfast='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs fasterer'
+
 #PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 #PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
@@ -59,12 +64,14 @@ PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 #XCode 5 hides these away:
-export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
-export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
-export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
+#export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
+#export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
+#export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
+
 export LC_ALL=en_US.UTF-8
 export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
-export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna"
+export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna/develop/"
+export EDITOR=nvim
 
 #rbenv issues
 export PATH="$HOME/.rbenv/bin:$PATH"

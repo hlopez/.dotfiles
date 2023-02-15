@@ -7,38 +7,42 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
   if has('nvim')
-    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'ThePrimeagen/harpoon'
+    Plug 'ThePrimeagen/git-worktree.nvim'
+    Plug 'ycm-core/YouCompleteMe'
   else
     Plug 'Shougo/denite.nvim'
     Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
+
+  Plug 'airblade/vim-gitgutter'
   Plug 'chemzqm/denite-extra'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-vinegar'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'airblade/vim-gitgutter'
   Plug 'dbeniamine/cheat.sh-vim'
   Plug 'kchmck/vim-coffee-script'
-  Plug 'rafalbromirski/vim-aurora'
   Plug 'chrisbra/csv.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'mbbill/undotree'
   "
   " Color schemes
-  Plug 'andreasvc/vim-256noir'
+  "Plug 'rafalbromirski/vim-aurora'
+  "Plug 'andreasvc/vim-256noir'
   Plug 'morhetz/gruvbox'
-  Plug 'davidosomething/vim-colors-meh'
-  Plug 'tomasr/molokai'
-  Plug 'mhartington/oceanic-next'
-  Plug 'cocopon/iceberg.vim'
-  Plug 'arcticicestudio/nord-vim'
+  "Plug 'davidosomething/vim-colors-meh'
+  "Plug 'tomasr/molokai'
+  "Plug 'mhartington/oceanic-next'
+  "Plug 'cocopon/iceberg.vim'
+  "Plug 'arcticicestudio/nord-vim'
   " Initialize plugin system
-call plug#end()
+  call plug#end()
 
 
 let g:mapleader = "\<Space>"
@@ -171,6 +175,7 @@ function! OpenURL(url)
 endfunction
 
 command! -nargs=1 OpenURL :call OpenURL(<q-args>)
+command! Gqf GitGutterQuickFix | copen
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
@@ -259,52 +264,52 @@ endif
 " based on
 " https://github.com/sodiumjoe/dotfiles/blob/master/vimrc#L179
 "
-autocmd FileType denite call s:denite_settings()
+"autocmd FileType denite call s:denite_settings()
+"
+"
+"function! s:denite_settings() abort
+"  nnoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+"  nnoremap <silent><buffer><expr> <C-v> denite#do_map('do_action', 'vsplit')
+"  nnoremap <silent><buffer><expr> d denite#do_map('do_action', 'delete')
+"  nnoremap <silent><buffer><expr> p denite#do_map('do_action', 'preview')
+"  nnoremap <silent><buffer><expr> <Esc> denite#do_map('quit')
+"  nnoremap <silent><buffer><expr> q denite#do_map('quit')
+"  nnoremap <silent><buffer><expr> i denite#do_map('open_filter_buffer')
+"endfunction
+"
+"autocmd FileType denite-filter call s:denite_filter_settings()
+"
+"function! s:denite_filter_settings() abort
+"  nmap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
+"endfunction
+"
+"nnoremap <C-p> :<C-u>Denite file/rec -start-filter<CR>
+"nnoremap <C-b> :<C-u>Denite file/rec buffer -start-filter<CR>
+"nnoremap <leader>s :<C-u>Denite buffer<CR>
+"nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
+"nnoremap <leader>/ :<C-u>Denite grep:.<CR>
+"nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:.<CR>
+"nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
+"nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
+"nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
+"nnoremap <leader>g :<C-u>Denite gitstatus<CR>
 
-
-function! s:denite_settings() abort
-  nnoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> <C-v> denite#do_map('do_action', 'vsplit')
-  nnoremap <silent><buffer><expr> d denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> <Esc> denite#do_map('quit')
-  nnoremap <silent><buffer><expr> q denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i denite#do_map('open_filter_buffer')
-endfunction
-
-autocmd FileType denite-filter call s:denite_filter_settings()
-
-function! s:denite_filter_settings() abort
-  nmap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
-endfunction
-
-nnoremap <C-p> :<C-u>Denite file/rec -start-filter<CR>
-nnoremap <C-b> :<C-u>Denite file/rec buffer -start-filter<CR>
-nnoremap <leader>s :<C-u>Denite buffer<CR>
-nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>/ :<C-u>Denite grep:.<CR>
-nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:.<CR>
-nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
-nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
-nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
-nnoremap <leader>g :<C-u>Denite gitstatus<CR>
-
-hi link deniteMatchedChar Special
-
-if exists('denite#custom#map')
-  call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-  call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
-  if has('gui_running')
-    call denite#custom#option('default', {'prompt': '❯'})
-    call denite#custom#var('file/rec', 'command', ['fd', '-H', '--full-path'])
-    call denite#custom#var('grep', 'command', ['rg'])
-    call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--smart-case'])
-    call denite#custom#var('grep', 'recursive_opts', [])
-    call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-    call denite#custom#var('grep', 'separator', ['--'])
-    call denite#custom#var('grep', 'final_opts', [])
-  endif
-endif
+"hi link deniteMatchedChar Special
+"if exists('denite#custom#map')
+"  call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+"  call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+"  if has('gui_running')
+"    call denite#custom#option('default', {'prompt': '❯'})
+"    call denite#custom#var('file/rec', 'command', ['fd', '-H', '--full-path'])
+"    call denite#custom#var('grep', 'command', ['rg'])
+"    call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--smart-case'])
+"    call denite#custom#var('grep', 'recursive_opts', [])
+"    call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+"    call denite#custom#var('grep', 'separator', ['--'])
+"    call denite#custom#var('grep', 'final_opts', [])
+"  endif
+"endif
+"let g:deoplete#enable_at_startup = 1
 
 
 "Status line
@@ -317,25 +322,25 @@ set statusline+=%<\ %{fugitive#statusline()}%m
 
 "PLUGGIN CONFIGURATION
 
-""FUGITIVE
-nmap <leader>gj :diffget \\3<CR>
-nmap <leader>gf :diffget \\2<CR>
-nmap <leader>gs :G<CR>
+" Fugitive Conflict Resolution
+nnoremap <leader>gds :Gvdiffsplit!<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap gf :diffget //2<CR>
+nnoremap gj :diffget //3<CR>
 
 "" DEVELOPMENT
 nnoremap <leader>ds :cd ~/Development/sisne<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>di :cd ~/Development/intranet_gna/<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>dco :cd ~/Development/intranet_gna/apps/core/<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>dcl :cd ~/Development/intranet_gna/apps/clinical/<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>df :cd ~/Development/intranet_gna/apps/financial/<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>da :cd ~/Development/intranet_gna/apps/admin/<CR>:e.<CR>:pwd<CR>
-nnoremap <leader>dh :cd ~/Development/intranet_gna/apps/hrm/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>di :cd ~/Development/intranet_gna/develop/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>dco :cd ~/Development/intranet_gna/develop/apps/core/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>dcl :cd ~/Development/intranet_gna/develop/apps/clinical/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>df :cd ~/Development/intranet_gna/develop/apps/financial/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>da :cd ~/Development/intranet_gna/develop/apps/admin/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>dh :cd ~/Development/intranet_gna/develop/apps/hrm/<CR>:e.<CR>:pwd<CR>
 
 "" DEVELOPMENT
 nnoremap <leader>em :Emodel<SPACE>
 nnoremap <leader>ev :Eview<SPACE>
 nnoremap <leader>ec :Econtroller<SPACE>
-
 
 ""For spell checking
 nmap <silent> <leader>scs :set spell! spelllang=es<CR>
@@ -369,7 +374,6 @@ nnoremap <leader>b  :e ~/Development/bullet_task.txt<CR>
 ""thers maps
 nnoremap <silent> <F4> :lchdir %:p:h<CR>:pwd<CR>
 
-let g:deoplete#enable_at_startup = 1
 
 "let g:vimade = {"fadelevel": 0.9}
 "
@@ -388,4 +392,21 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-nnoremap <silent> <C-f> :silent !~/.local/bin/tmux-windowizer %<CR>
+"Move text around
+inoremap <M-H> <CMD>normal <<<CR>
+inoremap <M-L> <CMD>normal >><CR>
+inoremap <M-K> <CMD>m .-2<CR>
+inoremap <M-J> <CMD>m .+1<CR>
+
+vnoremap <M-K> :m '<-2<CR>gv
+vnoremap <M-J> :m '>+1<CR>gv
+vnoremap <M-H> <gv
+vnoremap <M-L> >gv
+
+
+nnoremap <silent> <C-f> :silent !~/.local/bin/tmux-windowizer %:p<CR>
+nnoremap <F5> :UndotreeToggle<CR>
+
+lua require("telescope").load_extension("git_worktree")
+
+
