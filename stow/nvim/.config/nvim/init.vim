@@ -331,6 +331,7 @@ nnoremap gj :diffget //3<CR>
 "" DEVELOPMENT
 nnoremap <leader>ds :cd ~/Development/sisne<CR>:e.<CR>:pwd<CR>
 nnoremap <leader>di :cd ~/Development/intranet_gna/develop/<CR>:e.<CR>:pwd<CR>
+nnoremap <leader>db :cd ~/Development/intranet_gna/neurobank/<CR>:e.<CR>:pwd<CR>
 nnoremap <leader>dco :cd ~/Development/intranet_gna/develop/apps/core/<CR>:e.<CR>:pwd<CR>
 nnoremap <leader>dcl :cd ~/Development/intranet_gna/develop/apps/clinical/<CR>:e.<CR>:pwd<CR>
 nnoremap <leader>df :cd ~/Development/intranet_gna/develop/apps/financial/<CR>:e.<CR>:pwd<CR>
