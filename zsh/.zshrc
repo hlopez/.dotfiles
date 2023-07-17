@@ -62,8 +62,7 @@ PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-export LC_ALL=en_US.UTF-8
-export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
+export LC_ALL=en_US.UTF-8 export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
 export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna"
 export EDITOR=nvim
 
