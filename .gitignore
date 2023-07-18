@@ -1,2 +1,2 @@
-bin/.local/share/nvim/site/*
-bin/.local/share/nvim/site/*/
+bin/.local/share/nvim/*
+bin/.local/share/nvim/*/
