@@ -1,0 +1,44 @@
+[INFO  Mon Jul 17 15:04:58 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=rubocop) {}
+[INFO  Mon Jul 17 15:05:06 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=ruby-lsp) {}
+[INFO  Mon Jul 17 15:05:36 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=erb-lint) {}
+[INFO  Mon Jul 17 15:05:58 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:07:16 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:07:26 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=rubocop) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:08:45 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=erb-lint) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:09:57 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=ruby-lsp) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:23:49 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[INFO  Mon Jul 17 15:23:59 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=erb-lint) {}
+[ERROR Mon Jul 17 15:24:09 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:24:16 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=erb-lint) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:30:58 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=typescript-language-server) {}
+[INFO  Mon Jul 17 15:30:58 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:30:58 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=typescript-language-server) error=spawn: npm failed with exit code - and signal -. npm is not executable
+[ERROR Mon Jul 17 15:31:16 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:31:35 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:31:52 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:32:41 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=rubocop) {}
+[INFO  Mon Jul 17 15:32:47 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[INFO  Mon Jul 17 15:32:51 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=erb-lint) {}
+[ERROR Mon Jul 17 15:32:57 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=rubocop) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:33:04 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Mon Jul 17 15:33:08 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=erb-lint) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:35:05 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:35:22 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:36:01 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:36:19 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:43:07 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:43:25 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:44:09 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:44:25 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 15:53:01 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 15:53:05 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error="Installation was aborted."
+[INFO  Mon Jul 17 16:07:08 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 16:07:27 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 16:12:15 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[ERROR Mon Jul 17 16:12:33 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=solargraph) error=spawn: gem failed with exit code 1 and signal 0. 
+[INFO  Mon Jul 17 16:18:05 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=solargraph) {}
+[INFO  Mon Jul 17 16:18:17 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=solargraph)
+[INFO  Mon Jul 17 16:19:52 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=ruby-lsp) {}
+[INFO  Mon Jul 17 16:19:55 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=ruby-lsp)
+[INFO  Mon Jul 17 16:20:07 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=rubocop) {}
+[INFO  Mon Jul 17 16:20:11 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=rubocop)

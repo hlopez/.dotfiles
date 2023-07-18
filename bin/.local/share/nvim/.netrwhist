@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/hugo.lopez/.dotfiles'
+let g:netrw_dirhist_0='/Users/hugo.lopez/.dotfiles/.git'
+let g:netrw_dirhist_9='/Users/hugo.lopez/.dotfiles'
+let g:netrw_dirhist_8='/Users/hugo.lopez'
+let g:netrw_dirhist_7='/Users/hugo.lopez/.config/nvim'
+let g:netrw_dirhist_6='/Users/hugo.lopez/.config'
+let g:netrw_dirhist_5='/Users/hugo.lopez'
+let g:netrw_dirhist_4='/Users/hugo.lopez/.config/nvim/after/plugin'
+let g:netrw_dirhist_3='/Users/hugo.lopez/.config/nvim/after'
+let g:netrw_dirhist_2='/Users/hugo.lopez/.config/nvim'

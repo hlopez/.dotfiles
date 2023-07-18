@@ -1,0 +1,27 @@
+current directory: /Users/hugo.lopez/.dotfiles/bin/.local/share/nvim/mason/staging/solargraph/gems/rbs-2.8.4/ext/rbs_extension
+/Users/hugo.lopez/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+checking for whether -std=gnu99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/hugo.lopez/.dotfiles/bin/.local/share/nvim/mason/staging/solargraph/gems/rbs-2.8.4/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20230717-99904-yb772p sitelibdir\=./.gem.20230717-99904-yb772p clean
+
+current directory: /Users/hugo.lopez/.dotfiles/bin/.local/share/nvim/mason/staging/solargraph/gems/rbs-2.8.4/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20230717-99904-yb772p sitelibdir\=./.gem.20230717-99904-yb772p
+compiling constants.c
+compiling lexer.c
+compiling lexstate.c
+compiling location.c
+compiling main.c
+compiling parser.c
+compiling parserstate.c
+compiling ruby_objs.c
+compiling unescape.c
+linking shared-object rbs_extension.bundle
+
+current directory: /Users/hugo.lopez/.dotfiles/bin/.local/share/nvim/mason/staging/solargraph/gems/rbs-2.8.4/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20230717-99904-yb772p sitelibdir\=./.gem.20230717-99904-yb772p install
+/usr/bin/install -c -m 0755 rbs_extension.bundle ./.gem.20230717-99904-yb772p
+
+current directory: /Users/hugo.lopez/.dotfiles/bin/.local/share/nvim/mason/staging/solargraph/gems/rbs-2.8.4/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20230717-99904-yb772p sitelibdir\=./.gem.20230717-99904-yb772p clean

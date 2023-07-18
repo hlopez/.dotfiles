@@ -61,15 +61,18 @@ alias lsfast='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs f
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 
-export LC_ALL=en_US.UTF-8 export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
+export LC_ALL=en_US.UTF-8
+export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
 export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna"
 export EDITOR=nvim
 
-#rbenv issues
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=true
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(rbenv init - zsh)"
