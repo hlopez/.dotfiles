@@ -1,2 +1,2 @@
-bin/.local/share/nvim/site/pack/packer/*
-bin/.local/share/nvim/site/pack/packer/*/
+bin/.local/share/nvim/site/*
+bin/.local/share/nvim/site/*/
