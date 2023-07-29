@@ -1,1 +1,0 @@
-{"primary_source":{"id":"pkg:gem\/ruby-lsp@0.7.0","type":"registry+v1","source":{"version":"0.7.0","package":"ruby-lsp"}},"secondary_sources":[],"schema_version":"1.1","links":{"share":{},"bin":{"ruby-lsp":"ruby-lsp"},"opt":{}},"name":"ruby-lsp","metrics":{"completion_time":1689628795701,"start_time":1689628793010}}

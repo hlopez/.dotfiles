@@ -1,1 +1,1 @@
-{"primary_source":{"id":"pkg:gem\/rubocop@1.54.1","type":"registry+v1","source":{"version":"1.54.1","package":"rubocop"}},"secondary_sources":[],"schema_version":"1.1","links":{"share":{},"bin":{"rubocop":"rubocop"},"opt":{}},"name":"rubocop","metrics":{"completion_time":1689628811026,"start_time":1689628807330}}
+{"primary_source":{"id":"pkg:gem\/rubocop@1.54.2","type":"registry+v1"},"links":{"bin":{"rubocop":"rubocop"},"opt":{},"share":{}},"metrics":{"start_time":1690321899821,"completion_time":1690321935043},"secondary_sources":[],"name":"rubocop","schema_version":"1.1"}

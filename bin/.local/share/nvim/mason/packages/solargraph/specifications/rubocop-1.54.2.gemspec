@@ -19,21 +19,36 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/rubocop/rubocop".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.7.0".freeze)
-  s.rubygems_version = "3.4.10".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "Automatic Ruby code style checking tool.".freeze
 
-  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
-  s.specification_version = 4
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+  end
 
-  s.add_runtime_dependency(%q<json>.freeze, ["~> 2.3"])
-  s.add_runtime_dependency(%q<language_server-protocol>.freeze, [">= 3.17.0"])
-  s.add_runtime_dependency(%q<parallel>.freeze, ["~> 1.10"])
-  s.add_runtime_dependency(%q<parser>.freeze, [">= 3.2.2.3"])
-  s.add_runtime_dependency(%q<rainbow>.freeze, [">= 2.2.2", "< 4.0"])
-  s.add_runtime_dependency(%q<regexp_parser>.freeze, [">= 1.8", "< 3.0"])
-  s.add_runtime_dependency(%q<rexml>.freeze, [">= 3.2.5", "< 4.0"])
-  s.add_runtime_dependency(%q<rubocop-ast>.freeze, [">= 1.28.0", "< 2.0"])
-  s.add_runtime_dependency(%q<ruby-progressbar>.freeze, ["~> 1.7"])
-  s.add_runtime_dependency(%q<unicode-display_width>.freeze, [">= 2.4.0", "< 3.0"])
+  if s.respond_to? :add_runtime_dependency then
+    s.add_runtime_dependency(%q<json>.freeze, ["~> 2.3"])
+    s.add_runtime_dependency(%q<language_server-protocol>.freeze, [">= 3.17.0"])
+    s.add_runtime_dependency(%q<parallel>.freeze, ["~> 1.10"])
+    s.add_runtime_dependency(%q<parser>.freeze, [">= 3.2.2.3"])
+    s.add_runtime_dependency(%q<rainbow>.freeze, [">= 2.2.2", "< 4.0"])
+    s.add_runtime_dependency(%q<regexp_parser>.freeze, [">= 1.8", "< 3.0"])
+    s.add_runtime_dependency(%q<rexml>.freeze, [">= 3.2.5", "< 4.0"])
+    s.add_runtime_dependency(%q<rubocop-ast>.freeze, [">= 1.28.0", "< 2.0"])
+    s.add_runtime_dependency(%q<ruby-progressbar>.freeze, ["~> 1.7"])
+    s.add_runtime_dependency(%q<unicode-display_width>.freeze, [">= 2.4.0", "< 3.0"])
+  else
+    s.add_dependency(%q<json>.freeze, ["~> 2.3"])
+    s.add_dependency(%q<language_server-protocol>.freeze, [">= 3.17.0"])
+    s.add_dependency(%q<parallel>.freeze, ["~> 1.10"])
+    s.add_dependency(%q<parser>.freeze, [">= 3.2.2.3"])
+    s.add_dependency(%q<rainbow>.freeze, [">= 2.2.2", "< 4.0"])
+    s.add_dependency(%q<regexp_parser>.freeze, [">= 1.8", "< 3.0"])
+    s.add_dependency(%q<rexml>.freeze, [">= 3.2.5", "< 4.0"])
+    s.add_dependency(%q<rubocop-ast>.freeze, [">= 1.28.0", "< 2.0"])
+    s.add_dependency(%q<ruby-progressbar>.freeze, ["~> 1.7"])
+    s.add_dependency(%q<unicode-display_width>.freeze, [">= 2.4.0", "< 3.0"])
+  end
 end

@@ -14,13 +14,20 @@ Gem::Specification.new do |s|
   s.email = ["keiju@ruby-lang.org".freeze]
   s.homepage = "https://github.com/ruby/e2mmap".freeze
   s.licenses = ["BSD-2-Clause".freeze]
-  s.rubygems_version = "3.4.10".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "Module for defining custom exceptions with specific messages.".freeze
 
-  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
-  s.specification_version = 4
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+  end
 
-  s.add_development_dependency(%q<bundler>.freeze, ["~> 1.16"])
-  s.add_development_dependency(%q<rake>.freeze, ["~> 10.0"])
+  if s.respond_to? :add_runtime_dependency then
+    s.add_development_dependency(%q<bundler>.freeze, ["~> 1.16"])
+    s.add_development_dependency(%q<rake>.freeze, ["~> 10.0"])
+  else
+    s.add_dependency(%q<bundler>.freeze, ["~> 1.16"])
+    s.add_dependency(%q<rake>.freeze, ["~> 10.0"])
+  end
 end

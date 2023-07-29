@@ -17,14 +17,22 @@ Gem::Specification.new do |s|
   s.files = ["ext/jaro_winkler/extconf.rb".freeze]
   s.homepage = "https://github.com/tonytonyjan/jaro_winkler".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.4.10".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "An implementation of Jaro-Winkler distance algorithm written \\ in C extension which supports any kind of string encoding.".freeze
 
-  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
-  s.specification_version = 4
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+  end
 
-  s.add_development_dependency(%q<rake>.freeze, ["~> 13.0"])
-  s.add_development_dependency(%q<rake-compiler>.freeze, [">= 0"])
-  s.add_development_dependency(%q<minitest>.freeze, [">= 0"])
+  if s.respond_to? :add_runtime_dependency then
+    s.add_development_dependency(%q<rake>.freeze, ["~> 13.0"])
+    s.add_development_dependency(%q<rake-compiler>.freeze, [">= 0"])
+    s.add_development_dependency(%q<minitest>.freeze, [">= 0"])
+  else
+    s.add_dependency(%q<rake>.freeze, ["~> 13.0"])
+    s.add_dependency(%q<rake-compiler>.freeze, [">= 0"])
+    s.add_dependency(%q<minitest>.freeze, [">= 0"])
+  end
 end

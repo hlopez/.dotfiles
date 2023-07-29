@@ -17,21 +17,36 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/whitequark/parser".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0.0".freeze)
-  s.rubygems_version = "3.4.10".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "A Ruby parser written in pure Ruby.".freeze
 
-  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
-  s.specification_version = 4
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+  end
 
-  s.add_runtime_dependency(%q<ast>.freeze, ["~> 2.4.1"])
-  s.add_runtime_dependency(%q<racc>.freeze, [">= 0"])
-  s.add_development_dependency(%q<bundler>.freeze, [">= 1.15", "< 3.0.0"])
-  s.add_development_dependency(%q<rake>.freeze, ["~> 13.0.1"])
-  s.add_development_dependency(%q<cliver>.freeze, ["~> 0.3.2"])
-  s.add_development_dependency(%q<yard>.freeze, [">= 0"])
-  s.add_development_dependency(%q<kramdown>.freeze, [">= 0"])
-  s.add_development_dependency(%q<minitest>.freeze, ["~> 5.10"])
-  s.add_development_dependency(%q<simplecov>.freeze, ["~> 0.15.1"])
-  s.add_development_dependency(%q<gauntlet>.freeze, [">= 0"])
+  if s.respond_to? :add_runtime_dependency then
+    s.add_runtime_dependency(%q<ast>.freeze, ["~> 2.4.1"])
+    s.add_runtime_dependency(%q<racc>.freeze, [">= 0"])
+    s.add_development_dependency(%q<bundler>.freeze, [">= 1.15", "< 3.0.0"])
+    s.add_development_dependency(%q<rake>.freeze, ["~> 13.0.1"])
+    s.add_development_dependency(%q<cliver>.freeze, ["~> 0.3.2"])
+    s.add_development_dependency(%q<yard>.freeze, [">= 0"])
+    s.add_development_dependency(%q<kramdown>.freeze, [">= 0"])
+    s.add_development_dependency(%q<minitest>.freeze, ["~> 5.10"])
+    s.add_development_dependency(%q<simplecov>.freeze, ["~> 0.15.1"])
+    s.add_development_dependency(%q<gauntlet>.freeze, [">= 0"])
+  else
+    s.add_dependency(%q<ast>.freeze, ["~> 2.4.1"])
+    s.add_dependency(%q<racc>.freeze, [">= 0"])
+    s.add_dependency(%q<bundler>.freeze, [">= 1.15", "< 3.0.0"])
+    s.add_dependency(%q<rake>.freeze, ["~> 13.0.1"])
+    s.add_dependency(%q<cliver>.freeze, ["~> 0.3.2"])
+    s.add_dependency(%q<yard>.freeze, [">= 0"])
+    s.add_dependency(%q<kramdown>.freeze, [">= 0"])
+    s.add_dependency(%q<minitest>.freeze, ["~> 5.10"])
+    s.add_dependency(%q<simplecov>.freeze, ["~> 0.15.1"])
+    s.add_dependency(%q<gauntlet>.freeze, [">= 0"])
+  end
 end

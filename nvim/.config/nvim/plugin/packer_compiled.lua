@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -124,15 +129,16 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  playground = {
-    loaded = true,
-    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -153,6 +159,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-coffee-script"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-coffee-script",
+    url = "https://github.com/kchmck/vim-coffee-script"
   },
   ["vim-fugitive"] = {
     loaded = true,

@@ -58,10 +58,11 @@ alias lsrubod='git diff --diff-filter=d --name-only develop| xargs bundle exec r
 alias lsreek='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs reek'
 alias lsfast='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs fasterer'
 
-PATH="/usr/local/bin:$PATH"
-PATH="$HOME/.local/bin:$PATH"
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 export LC_ALL=en_US.UTF-8
 export SISNE_HOME="/Users/hugo.lopez/Development/sisne"
@@ -70,8 +71,8 @@ export EDITOR=nvim
 
 export HOMEBREW_NO_AUTO_UPDATE=true
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
