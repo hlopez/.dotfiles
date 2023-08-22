@@ -6,8 +6,31 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="frisk"
- ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="alanpeabody"
+
+# Define a custom function to show Git branch or folder symbol
+function git_prompt() {
+  local git_status="$(git status 2> /dev/null)"
+
+  if [[ $git_status =~ "working tree clean" ]]; then
+    echo "🌿" # Green tree emoji for a clean working tree
+  elif [[ $git_status =~ "Changes not staged for commit" ]]; then
+    echo "🚧" # Orange construction emoji for unstaged changes
+  elif [[ $git_status =~ "Changes to be committed" ]]; then
+    echo "🚀" # Rocket emoji for staged changes
+  elif [[ $git_status =~ "Untracked files" ]]; then
+    echo "❓" # Question mark emoji for untracked files
+  else
+    echo "🔄" # Loop emoji for other Git states
+  fi
+}
+
+# Customize your prompt
+PROMPT='%(?.%{$fg[green]%}➜ :%{$fg[red]%}➜ )'
+PROMPT+=' %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt)%{$reset_color%} '
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
