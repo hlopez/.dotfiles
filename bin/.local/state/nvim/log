@@ -1,0 +1,3 @@
+ERR 2023-08-24T17:43:49.493 nvim.89599.0 loop_close:174: uv_loop_close() hang?
+[-AI] async    0x106fc2838
+[R--] check    0x6000037ac000
