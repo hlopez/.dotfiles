@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     use( 'tpope/vim-fugitive' )
     use( 'tpope/vim-vinegar' )
     use( 'tpope/vim-rails')
+    use( 'madox2/vim-ai')
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
