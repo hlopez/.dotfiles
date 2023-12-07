@@ -70,3 +70,15 @@
 [INFO  Tue Jul 25 16:52:15 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=rubocop)
 [INFO  Tue Jul 25 18:11:45 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=ruby-lsp) {}
 [ERROR Tue Jul 25 18:12:16 2023] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:249: Installation failed for Package(name=ruby-lsp) error=spawn: gem failed with exit code 1 and signal 0. 
+[ERROR Wed Dec  6 17:24:24 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:24 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:24 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:86: No provider implementation succeeded for github.get_latest_release
+[ERROR Wed Dec  6 17:24:24 2023] ...r/start/mason.nvim/lua/mason-registry/sources/github.lua:181: Failed to install registry GitHubRegistrySource(repo=mason-org/mason-registry). "Failed to fetch latest registry version from GitHub API."
+[ERROR Wed Dec  6 17:24:32 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:32 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:32 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:86: No provider implementation succeeded for github.get_latest_release
+[ERROR Wed Dec  6 17:24:32 2023] ...r/start/mason.nvim/lua/mason-registry/sources/github.lua:181: Failed to install registry GitHubRegistrySource(repo=mason-org/mason-registry). "Failed to fetch latest registry version from GitHub API."
+[ERROR Wed Dec  6 17:24:52 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:52 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:75: Provider "github" "get_latest_release" failed: spawn: wget failed with exit code - and signal -. wget is not executable
+[ERROR Wed Dec  6 17:24:52 2023] ...acker/start/mason.nvim/lua/mason-core/providers/init.lua:86: No provider implementation succeeded for github.get_latest_release
+[ERROR Wed Dec  6 17:24:52 2023] ...r/start/mason.nvim/lua/mason-registry/sources/github.lua:181: Failed to install registry GitHubRegistrySource(repo=mason-org/mason-registry). "Failed to fetch latest registry version from GitHub API."

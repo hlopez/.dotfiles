@@ -314,7 +314,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v59.7.0",
+      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v59.8.0",
       "asset": {
         "file": "salesforcedx-vscode-apex-{{ version | strip_prefix \"v\" }}.vsix"
       }
@@ -1131,7 +1131,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:cargo/cairo-language-server@2.3.1"
+      "id": "pkg:cargo/cairo-language-server@2.4.0"
     },
     "bin": {
       "cairo-language-server": "cargo:cairo-language-server"
@@ -1989,7 +1989,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/cspell@8.1.2"
+      "id": "pkg:npm/cspell@8.1.3"
     },
     "bin": {
       "cspell": "npm:cspell"
@@ -2262,7 +2262,7 @@
       "Runtime"
     ],
     "source": {
-      "id": "pkg:github/denoland/deno@v1.38.4",
+      "id": "pkg:github/denoland/deno@v1.38.5",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -2599,7 +2599,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:composer/symplify/easy-coding-standard@12.0.11"
+      "id": "pkg:composer/symplify/easy-coding-standard@12.0.13"
     },
     "bin": {
       "ecs": "composer:ecs"
@@ -3152,7 +3152,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/FacilityApi/FacilityLanguageServer@v2.1.0",
+      "id": "pkg:github/FacilityApi/FacilityLanguageServer@v2.2.0",
       "asset": {
         "file": "Facility.LanguageServer.zip:libexec/"
       }
@@ -3459,7 +3459,7 @@
     "languages": [],
     "categories": [],
     "source": {
-      "id": "pkg:github/cli/cli@v2.39.2",
+      "id": "pkg:github/cli/cli@v2.40.0",
       "asset": [
         {
           "target": "darwin_x64",
@@ -4935,7 +4935,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:golang/github.com/wader/jq-lsp@v0.0.0-20221220100930-4aadc9e4bf54"
+      "id": "pkg:golang/github.com/wader/jq-lsp@v0.1.0"
     },
     "bin": {
       "jq-lsp": "golang:jq-lsp"
@@ -5909,7 +5909,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/artempyanykh/marksman@2023-11-29",
+      "id": "pkg:github/artempyanykh/marksman@2023-12-07",
       "asset": [
         {
           "target": [
@@ -5970,7 +5970,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/mathworks/MATLAB-language-server@0d7e0728441fad2655271e5c379024981efaad1e",
+      "id": "pkg:github/mathworks/MATLAB-language-server@e05673ab0e9190bc0a6428c0071ecd5abc1a4d67",
       "build": {
         "run": "npm install\nnpm run package\n"
       }
@@ -6067,7 +6067,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/azdavis/millet@v0.14.0",
+      "id": "pkg:github/azdavis/millet@v0.14.1",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -7314,7 +7314,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40prisma/language-server@5.6.0"
+      "id": "pkg:npm/%40prisma/language-server@5.7.0"
     },
     "bin": {
       "prisma-language-server": "npm:prisma-language-server"
@@ -7801,7 +7801,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/pyright@1.1.338"
+      "id": "pkg:npm/pyright@1.1.339"
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/microsoft/pyright/{{version}}/packages/vscode-pyright/package.json"
@@ -8300,7 +8300,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/ruby-lsp@0.13.0"
+      "id": "pkg:gem/ruby-lsp@0.13.1"
     },
     "bin": {
       "ruby-lsp": "gem:ruby-lsp"
@@ -8852,7 +8852,7 @@
       "Compiler"
     ],
     "source": {
-      "id": "pkg:github/shader-slang/slang@v2023.4.10",
+      "id": "pkg:github/shader-slang/slang@v2023.5.0",
       "asset": [
         {
           "target": "linux_x64_gnu",
@@ -9335,7 +9335,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.11145",
+      "id": "pkg:gem/sorbet@0.5.11147",
       "supported_platforms": [
         "unix"
       ]
@@ -10860,7 +10860,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/daveshanley/vacuum@v0.5.9",
+      "id": "pkg:github/daveshanley/vacuum@v0.5.10",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -11005,7 +11005,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/errata-ai/vale@v2.29.7",
+      "id": "pkg:github/errata-ai/vale@v2.30.0",
       "asset": [
         {
           "target": "darwin_x64",
@@ -11252,7 +11252,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v59.7.0",
+      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v59.8.0",
       "asset": {
         "file": "salesforcedx-vscode-visualforce-{{ version | strip_prefix \"v\" }}.vsix"
       }

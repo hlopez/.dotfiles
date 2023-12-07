@@ -38,9 +38,10 @@ function git_prompt() {
 #PROMPT='%(?.%{$fg[green]%}➜ :%{$fg[red]%}➜ )'
 #PROMPT+=' %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt)%{$reset_color%} '
 
+#PROMPT='%{$fg[black]%}%n@%m %{$fg[blue]%}%~ %{$reset_color%}$(git_prompt) '
+#PROMPT='%{$fg[green]%}%n@%m %{$fg_bold[blue]%}%~ %{$reset_color%}$(git_prompt) '
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
@@ -72,12 +73,12 @@ function git_prompt() {
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-#
+alias zshconfig="nvim ~/.zshrc"
 alias sshneuro='ssh hugo.lopez@200.24.30.19 -p 62331'
 alias mvsisne='open -a /Applications/MacVim.app ~/Development/sisne/'
 alias psqlsisne='psql --cluster 9.3/main sisne'
