@@ -101,7 +101,7 @@ export INTRANET_HOME="/Users/hugo.lopez/Development/intranet_gna"
 export EDITOR=nvim
 
 export HOMEBREW_NO_AUTO_UPDATE=true
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 

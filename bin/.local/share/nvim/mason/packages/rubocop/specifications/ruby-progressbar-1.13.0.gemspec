@@ -15,24 +15,15 @@ Gem::Specification.new do |s|
   s.email = ["support@thekompanee.com".freeze]
   s.homepage = "https://github.com/jfelchner/ruby-progressbar".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.1.2".freeze
+  s.rubygems_version = "3.4.10".freeze
   s.summary = "Ruby/ProgressBar is a flexible text progress bar library for Ruby.".freeze
 
-  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_development_dependency(%q<rspec>.freeze, ["~> 3.7"])
-    s.add_development_dependency(%q<rspectacular>.freeze, ["~> 0.70.6"])
-    s.add_development_dependency(%q<fuubar>.freeze, ["~> 2.3"])
-    s.add_development_dependency(%q<timecop>.freeze, ["~> 0.9"])
-  else
-    s.add_dependency(%q<rspec>.freeze, ["~> 3.7"])
-    s.add_dependency(%q<rspectacular>.freeze, ["~> 0.70.6"])
-    s.add_dependency(%q<fuubar>.freeze, ["~> 2.3"])
-    s.add_dependency(%q<timecop>.freeze, ["~> 0.9"])
-  end
+  s.add_development_dependency(%q<rspec>.freeze, ["~> 3.7"])
+  s.add_development_dependency(%q<rspectacular>.freeze, ["~> 0.70.6"])
+  s.add_development_dependency(%q<fuubar>.freeze, ["~> 2.3"])
+  s.add_development_dependency(%q<timecop>.freeze, ["~> 0.9"])
 end

@@ -15,30 +15,18 @@ Gem::Specification.new do |s|
   s.files = ["bin/reverse_markdown".freeze]
   s.homepage = "http://github.com/xijo/reverse_markdown".freeze
   s.licenses = ["WTFPL".freeze]
-  s.rubygems_version = "3.1.2".freeze
+  s.rubygems_version = "3.4.10".freeze
   s.summary = "Convert html code into markdown.".freeze
 
-  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_runtime_dependency(%q<nokogiri>.freeze, [">= 0"])
-    s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
-    s.add_development_dependency(%q<simplecov>.freeze, [">= 0"])
-    s.add_development_dependency(%q<rake>.freeze, [">= 0"])
-    s.add_development_dependency(%q<kramdown>.freeze, [">= 0"])
-    s.add_development_dependency(%q<byebug>.freeze, [">= 0"])
-    s.add_development_dependency(%q<codeclimate-test-reporter>.freeze, [">= 0"])
-  else
-    s.add_dependency(%q<nokogiri>.freeze, [">= 0"])
-    s.add_dependency(%q<rspec>.freeze, [">= 0"])
-    s.add_dependency(%q<simplecov>.freeze, [">= 0"])
-    s.add_dependency(%q<rake>.freeze, [">= 0"])
-    s.add_dependency(%q<kramdown>.freeze, [">= 0"])
-    s.add_dependency(%q<byebug>.freeze, [">= 0"])
-    s.add_dependency(%q<codeclimate-test-reporter>.freeze, [">= 0"])
-  end
+  s.add_runtime_dependency(%q<nokogiri>.freeze, [">= 0"])
+  s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
+  s.add_development_dependency(%q<simplecov>.freeze, [">= 0"])
+  s.add_development_dependency(%q<rake>.freeze, [">= 0"])
+  s.add_development_dependency(%q<kramdown>.freeze, [">= 0"])
+  s.add_development_dependency(%q<byebug>.freeze, [">= 0"])
+  s.add_development_dependency(%q<codeclimate-test-reporter>.freeze, [">= 0"])
 end

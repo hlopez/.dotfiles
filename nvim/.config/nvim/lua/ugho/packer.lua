@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+-- vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -18,32 +18,30 @@ return require('packer').startup(function(use)
     use( 'mbbill/undotree' )
     use( 'tpope/vim-fugitive' )
     use( 'tpope/vim-vinegar' )
-    use( 'tpope/vim-rails')
-    use( 'madox2/vim-ai')
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    use( 'tpope/vim-rails' )
+    use( 'nvim-tree/nvim-web-devicons' )
+    use({ 'norcalli/nvim-colorizer.lua',
+           config = function()
+              require'colorizer'.setup()
+           end
+        })
+    use({ 'glepnir/galaxyline.nvim',
+	       branch = 'main',
+	        -- your statusline
+           config = function()
+             require('ugho/my_statusline')
+           end,
+           -- some optional icons
+           requires = { 'nvim-tree/nvim-web-devicons', opt=true },
+        })
     use( 'kchmck/vim-coffee-script' )
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-    }
-   }
-
+    use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
+    use({'neovim/nvim-lspconfig'})
+    use({ "williamboman/mason.nvim" })
+    use({'hrsh7th/nvim-cmp'})
+    use({'hrsh7th/cmp-nvim-lsp'})
+    use({'hrsh7th/cmp-buffer'})
+    use({'hrsh7th/cmp-path'})
+    use({'hrsh7th/cmp-cmdline'})
+    use({'L3MON4D3/LuaSnip'}) 
 end)
