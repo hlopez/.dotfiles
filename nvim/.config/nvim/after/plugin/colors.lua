@@ -1,62 +1,49 @@
-require('rose-pine').setup({
-	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'auto',
-	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = 'main',
-	bold_vert_split = false,
-	dim_nc_background = false,
-	disable_background = false,
-	disable_float_background = false,
-	disable_italics = false,
+local bg = "#011628"
+local bg_dark = "#011423"
+local bg_highlight = "#143652"
+local bg_search = "#0A64AC"
+local bg_visual = "#275378"
+local fg = "#CBE0F0"
+local fg_dark = "#B4D0E9"
+local fg_gutter = "#627E97"
+local border = "#547998"
 
-	--- @usage string hex value or named color from rosepinetheme.com/palette
-	groups = {
-		background = 'base',
-		background_nc = '_experimental_nc',
-		panel = 'surface',
-		panel_nc = 'base',
-		border = 'highlight_med',
-		comment = 'muted',
-		link = 'iris',
-		punctuation = 'subtle',
-
-		error = 'love',
-		hint = 'iris',
-		info = 'foam',
-		warn = 'gold',
-
-		headings = {
-			h1 = 'iris',
-			h2 = 'foam',
-			h3 = 'rose',
-			h4 = 'gold',
-			h5 = 'pine',
-			h6 = 'foam',
-		}
-		-- or set all headings at once
-		-- headings = 'subtle'
-	},
-
-	-- Whether or not highlight_groups optios should change only only update
-	-- the settings they touch or should reset the entire highlight_group.
-	respect_default_highlight_groups = true,
-
-	-- Change specific vim highlight groups
-	-- https://github.com/rose-pine/neovim/wiki/Recipes
-	highlight_groups = {
-		ColorColumn = { bg = 'rose' },
-
-		-- Blend colours against the "base" background
-		CursorLine = { bg = 'foam', blend = 10 },
-		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
-	}
+require("tokyonight").setup({
+  style = "night",
+  -- style = "moon",
+  on_colors = function(colors)
+    colors.bg = bg
+    colors.bg_dark = bg_dark
+    colors.bg_float = bg_dark
+    colors.bg_highlight = bg_highlight
+    colors.bg_popup = bg_dark
+    colors.bg_search = bg_search
+    colors.bg_sidebar = bg_dark
+    colors.bg_statusline = bg_dark
+    colors.bg_visual = bg_visual
+    colors.border = border
+    colors.fg = fg
+    colors.fg_dark = fg_dark
+    colors.fg_float = fg
+    colors.fg_gutter = fg_gutter
+    colors.fg_sidebar = fg_dark
+  end,
 })
 
 function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
-	--vim.api.nvim_set_hl(0, "Normal", { bg = "None"})
-	--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None"})
+  color = color or "minimalist"
+  vim.o.termguicolors = true
+  vim.cmd.colorscheme(color)
 end
 
-ColorMyPencils()
+--ColorMyPencils('blue-moon')
+--ColorMyPencils('kanagawa')
+--ColorMyPencils('minimalist')
+ColorMyPencils('tokyonight')
+-- ColorMyPencils('catppuccin')
+-- I like in this order
+-- minimalist
+-- blue-moon
+-- Kanagawa
+-- catppuccin
+-- tokionight

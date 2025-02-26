@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -88,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-git"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/cmp-git",
+    url = "https://github.com/petertriho/cmp-git"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -99,11 +109,26 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["galaxyline.nvim"] = {
-    config = { "\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23ugho/my_statusline\frequire\0" },
+  cmp_luasnip = {
     loaded = true,
-    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
-    url = "https://github.com/glepnir/galaxyline.nvim"
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["fugitive-gitlab.vim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/fugitive-gitlab.vim",
+    url = "https://github.com/shumphrey/fugitive-gitlab.vim"
   },
   ["git-worktree.nvim"] = {
     loaded = true,
@@ -115,15 +140,46 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["lsp-zero.nvim"] = {
+  ["hydra.nvim"] = {
     loaded = true,
-    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/hydra.nvim",
+    url = "https://github.com/anuvyklack/hydra.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
+  ["lualine.nvim"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23ugho/my_statusline\frequire\0" },
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason-nvim-dap.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
+    url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
+  },
+  ["mason-tool-installer.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mason-tool-installer.nvim",
+    url = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.icons"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/mini.icons",
+    url = "https://github.com/echasnovski/mini.icons"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -136,10 +192,45 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ruby"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-dap-ruby",
+    url = "https://github.com/suketa/nvim-dap-ruby"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-lsp",
+    url = "https://github.com/neovim/nvim-lsp"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -151,6 +242,12 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["oil.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0" },
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -161,15 +258,35 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
+  ["telescope-dap.nvim"] = {
     loaded = true,
-    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
+  },
+  ["telescope-find-pickers.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/telescope-find-pickers.nvim",
+    url = "https://github.com/keyvchan/telescope-find-pickers.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
@@ -181,6 +298,21 @@ _G.packer_plugins = {
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-coffee-script",
     url = "https://github.com/kchmck/vim-coffee-script"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion",
+    url = "https://github.com/kristijanhusak/vim-dadbod-completion"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -190,23 +322,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-rails",
     url = "https://github.com/tpope/vim-rails"
-  },
-  ["vim-vinegar"] = {
-    loaded = true,
-    path = "/Users/hugo.lopez/.local/share/nvim/site/pack/packer/start/vim-vinegar",
-    url = "https://github.com/tpope/vim-vinegar"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: galaxyline.nvim
-time([[Config for galaxyline.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23ugho/my_statusline\frequire\0", "config", "galaxyline.nvim")
-time([[Config for galaxyline.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23ugho/my_statusline\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

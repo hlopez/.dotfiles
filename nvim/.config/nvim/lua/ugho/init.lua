@@ -1,2 +1,2 @@
-require "ugho/remap"
 require "ugho/set"
+require "ugho/remap"

@@ -1,6 +1,8 @@
 -- based on https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/remap.lua#L1C1-L31C27
 
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -14,10 +16,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "jk", "<Esc>")
 
@@ -47,23 +49,30 @@ vim.keymap.set("n", "<leader>h", ":noh<cr>")
 vim.keymap.set("c", "%%", "<C-R>=expand('%')<cr>")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>tt","<cmd>%s/\\s\\+$//e<cr>")
+vim.keymap.set("n", "<leader>tt", "<cmd>%s/\\s\\+$//e<cr>")
 
 -- For spell checking
-vim.keymap.set("n", "<silent> <leader>scs", "<cmd>set spell! spelllang=es<CR>")
-vim.keymap.set("n", "<silent> <leader>sce", "<cmd>set spell! spelllang=en_us<CR>")
-vim.keymap.set("n", "<silent> <leader>nsc", "<cmd>set nospell<CR>")
+vim.keymap.set("n", "<silent><leader>scs", "<cmd>set spell! spelllang=es<CR>")
+vim.keymap.set("n", "<silent><leader>sce", "<cmd>set spell! spelllang=en_us<CR>")
+vim.keymap.set("n", "<silent><leader>nsc", "<cmd>set nospell<CR>")
 
 -- For development
-vim.keymap.set("n","<leader>ds", "<cmd>cd ~/Development/sisne<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>di", "<cmd>cd ~/Development/intranet_gna/develop/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>db", "<cmd>cd ~/Development/intranet_gna/neurobank/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>dco", "<cmd>cd ~/Development/intranet_gna/develop/apps/core/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>dcl", "<cmd>cd ~/Development/intranet_gna/develop/apps/clinical/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>df", "<cmd>cd ~/Development/intranet_gna/develop/apps/financial/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>da", "<cmd>cd ~/Development/intranet_gna/develop/apps/admin/<CR>:e.<CR>:pwd<CR>")
-vim.keymap.set("n","<leader>dh", "<cmd>cd ~/Development/intranet_gna/develop/apps/hrm/<CR>:e.<CR>:pwd<CR>")
-
+vim.keymap.set("n", "<leader>dcl", "<cmd>cd ~/Development/intranet_gna/develop/apps/clinical/<CR>:e.<CR>")
+vim.keymap.set("n", "<leader>di", "<cmd>cd ~/Development/intranet_gna/develop/<CR>:e.<CR>")
+-- vim.keymap.set("n", "<leader>di", "<cmd>cd ~/Development/intranet_gna/develop/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>ds", "<cmd>cd ~/Development/sisne<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>db", "<cmd>cd ~/Development/intranet_gna/neurobank/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>dco", "<cmd>cd ~/Development/intranet_gna/develop/apps/core/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>dcl", "<cmd>cd ~/Development/intranet_gna/develop/apps/clinical/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>df", "<cmd>cd ~/Development/intranet_gna/develop/apps/financial/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>da", "<cmd>cd ~/Development/intranet_gna/develop/apps/admin/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader>dh", "<cmd>cd ~/Development/intranet_gna/develop/apps/hrm/<CR>:e.<CR>:pwd<CR>")
+-- vim.keymap.set("n", "<leader><leader>fp", require('telescope').extensions.find_pickers.find_pickers)
+vim.keymap.set('n', '<leader>td', function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { silent = true, noremap = true })
+-- Diagnostic keymaps
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
