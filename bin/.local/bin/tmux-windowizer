@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+window_name=$(basename "$1")
+path=$(dirname "$(echo "$1" | sed 's|\(.*\/apps\).*|\1|')")
+session_name=$(tmux display-message -p "#S")
+echo "${session_name}"
+clean_name=$(echo $window_name | tr "./" "__")
+target="$session_name:$clean_name"
+message="tmux display-message -d 8000 'Script ${window_name} is done'"
+# Get the current git branch name
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+if ! tmux has-session -t $target 2> /dev/null; then
+  tmux neww -dn $clean_name
+fi
+sed 's#lib/runners/##'
+case "$session_name" in
+    sisne)
+      cm="./script/runner"
+      ;;
+    *)
+      path =
+      cm="cd $path; rails runner"
+      ;;
+esac
+
+tmux send-keys -t $target "${cm} ${1} && ${message}" enter
+

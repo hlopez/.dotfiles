@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+case "$1" in
+    sisne)
+      selected=$SISNE_HOME
+      selected_name=$1
+      ;;
+    intranet)
+      if [ "$2" == "neurobank" ]; then
+        selected="$INTRANET_HOME/$2"
+        selected_name=$2
+      else
+        selected="$INTRANET_HOME/develop"
+        selected_name=$1
+      fi
+      ;;
+    *)
+      echo "No application selected"
+      exit 0
+      ;;
+esac
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -ds $selected_name -n code -c $selected
+fi
+
+if ! tmux has-session -t $selected_name 2> /dev/null; then
+    tmux new-session -ds $selected_name -n code -c $selected
+fi
+
+session_name=$selected_name
+clean_arg=database
+target="$session_name:$clean_arg"
+
+if ! tmux has-session -t $target 2> /dev/null; then
+    tmux new-window -n $clean_arg -c $selected -t $session_name:
+    tmux send-keys -t $target "psql$selected_name"
+fi
+
+clean_arg=server
+target="$session_name:$clean_arg"
+if ! tmux has-session -t $target 2> /dev/null; then
+  tmux new-window -n $clean_arg -c $selected -t $session_name:
+  tmux send-keys -t $target "~/.local/bin/run_$1.sh $2"
+fi
+
+if [[ -z $TMUX ]]; then
+  tmux attach-session -t "$selected_name:code"
+else
+  tmux switch-client -t "$selected_name:code"
+fi

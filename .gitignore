@@ -1,2 +1,2 @@
-**/.local/
-bin/.local/
+bin/.local/share/nvim.bak/
+bin/.local/state/
